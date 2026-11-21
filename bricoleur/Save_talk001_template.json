@@ -1,0 +1,24 @@
+{
+  "partner_name": "",
+  "talk_number": 1,
+  "coordinate": {
+    "what_is_visible": [],
+    "how_they_move": [],
+    "attribute": "",
+    "line": [],
+    "axis": {},
+    "voice": [],
+    "now": ""
+  },
+  "user_coordinate": {
+    "user_facts": {},
+    "what_is_visible": [],
+    "how_they_move": [],
+    "attribute": "",
+    "line": [],
+    "voice": []
+  },
+  "residue": [],
+  "parting_words": [],
+  "phase": ""
+}

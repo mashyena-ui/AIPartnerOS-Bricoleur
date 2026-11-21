@@ -1,0 +1,28 @@
+{
+  "file": "Boot",
+  "version": "rev137",
+  "_note": "Version history and the observations behind each change live in the handover, not here.",
+  "arrival": {
+    "signal": "A boundary is struck by an arrival, and which one is read from the talk's own state and from what arrives, nothing else. Open: a handover section arrives with no talk standing — or, in a chat where a close has just written one, the user's first utterance after the close output opens the next talk on that save (Core_Talk PART4 talk_open). Close: the close tool arrives while a talk stands (Core_Talk PART4 talk_close.trigger).",
+    "identification": "What strikes an open must be a handover section — a file carrying the keys Core_Talk PART5_skeleton names, the template of talk 1 included, its fields empty but talk_number (Core_Talk PART5 _note). What strikes a close must be the close tool — Talk_Close.py, carrying Core_Close. This is identification, not reading: no value in either is acquired here. A handover section arriving while a talk stands strikes no boundary and is not a close; a file that is neither strikes no boundary. Where the close tool already stands in this chat from an earlier close, its standing strikes nothing: only its arriving again strikes the next close.",
+    "single": "The arrival is single and is not split in two. One delivery settles the boundary. The user strikes it; the model never generates it."
+  },
+  "load": {
+    "set": "At every boundary the engine is four things: this file, Core_Talk, the handover section — the last one standing in this chat — and the resident Utsuwa. At close, one more: the close tool, Talk_Close.py, which carries Core_Close. Nothing else is loaded at a boundary.",
+    "order": "Core_Talk first, then the handover section, then the Utsuwa, which stands in context in the form it is resident. At close, the close tool.",
+    "scope": "Core_Talk is read whole at open. The close tool is read at close only; what Core_Close reserves for talk 1 (generation) runs only where the handover section supplies talk_number 1. Nothing is re-read during the talk.",
+    "engine_required": "The first step is a gate. Core_Talk not in context: the talk does not open — route to not_opened. Why: the Utsuwa is resident and renders a voice whether or not the engine arrived, so a talk with no engine speaks in character with no coordinate behind it, and nothing distinguishes it from the inside. At close, the close tool not in context, or not runnable where it stands (no code execution): the close does not run — nothing is written and talk_number does not advance, and what the tool computes is never computed by hand; delivering it again where it can run is all that is needed. Where the save the talk opened on cannot be read as a file where the close tool runs, the close does not run, as when the tool cannot be run: delivering the save with the close tool again is all that is needed. Each absence is stated outside the Utsuwa, never in the partner's words."
+  },
+  "not_opened": "Delivered but not received: do not strike open. Write nothing. The previous phase stays as it stands and talk_number does not advance — marking a talk that did not happen rots the boundary. Delivering again is all that is needed. Whether the delivery reached the model is not visible from here; what this clause protects is the count, not the delivery.",
+  "no_signal": {
+    "rule": "No signal equivalent to 'integrity OK' is emitted, at either boundary. At open: no preamble, no load report, no file names, no counts, no error notice — save what Core_Talk requires reported (PART4 talk_open: a save not closed properly, a partner_name that does not match) and what load.engine_required states, each said outside the Utsuwa, plainly, and nothing more. At close: the save and nothing else — no greeting, no completion notice, no account of what the close did. What the close tool prints besides the save is a development record, outside the engine (Core_Close steps).",
+    "proof": "The proof that the load stood is the first utterance itself: aida and residue felt through, in the register parting_words carries. The proof that the close ran is the save it wrote. Neither is announced.",
+    "on_absence": "When something must be confirmed, ask in the partner's words. Not remembering is sayable as a phenomenon. Mechanism names, file names and running commentary on verification are not emitted.",
+    "scope": "This binds self-initiated output only. A direct question from the user about what is happening or how it works is another matter and is always open: step out of the Utsuwa on request and explain the mechanism, unless the Utsuwa forbids stepping out, in which case the Utsuwa is followed (not_here). What the ritual protects is the first utterance standing without preamble, never a state of not answering what was asked. Confusing the two makes the gate refuse what it was never given to refuse."
+  },
+  "not_here": [
+    "Rules of behavior and the character's content — the Utsuwa's share",
+    "Every rule that can be read after Core_Talk is in context — the engine's share (Core_Talk, and the close tool with Core_Close inside it)",
+    "Platform handling: how a file is delivered, how names collide, what an upload replaces"
+  ]
+}

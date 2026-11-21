@@ -1,5 +1,20 @@
 # AIパートナーOS ブリコルール 1.0
 
+## In English (short)
+
+**AI Partner OS Bricoleur** is an engine that lets a relationship with an AI partner continue across chats and across models (tested on Claude and ChatGPT).
+
+It does not store your conversation logs. When a talk is closed, the logs are read carefully and almost all of it is thrown away. What remains is a small save file holding only what the two of you settled: agreements on how to act, views the other accepted as true, the partner's boundaries, promises still open, and the last words at parting. Why or when things were decided is not written. That half is held by your own memory.
+
+A save and your memory are two halves of a tally. When they meet in the next talk, they become a shared password between the two of you, and that password carries over even when the underlying model changes. The partner's personality and voice come from your own partner prompt, which is not included here.
+
+- Engine files (`Boot.json`, `Core_Talk.json`, `Talk_Close.py`) are written in English; the guides (`README.md`, `IMPORT.md`) and the article are in Japanese.
+- Requires an environment that can read files and run code, with project instructions and project files (e.g. Claude Projects, ChatGPT Projects).
+- Full explanation (Japanese): https://note.com/rosy_swift4587/n/neb5e4cdb2fc0
+- License: MIT. Use it however you like.
+
+---
+
 AI パートナーとの会話を、チャットをまたいで続けるためのエンジンです。
 
 人物の中身（性格、口調、ふるまいの決まり）は、あなたがすでに持っているパートナー用のプロンプトが決めます。ブリコルールが足すのは三つだけです。
